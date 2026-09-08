@@ -1,0 +1,15 @@
+Mobile/Web
+    ↓
+AWS ALB
+    ↓
+Spring Boot Application
+    ↓
+ ┌───────────────┐
+ │ PostgreSQL    │
+ │ Redis         │
+ │ S3            │
+ └───────────────┘
+    ↓
+ AI Gateway
+    ↓
+ Gemini / OpenAI
