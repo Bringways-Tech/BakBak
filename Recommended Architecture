@@ -1,0 +1,50 @@
+                         ┌─────────────────────┐
+                         │      USERS          │
+                         │ Android / iOS / Web │
+                         └──────────┬──────────┘
+                                    │
+                              HTTPS / JSON
+                                    │
+                           ┌────────▼────────┐
+                           │  CloudFront/CDN  │
+                           │   + WAF          │
+                           └────────┬────────┘
+                                    │
+                           ┌────────▼────────┐
+                           │ API Gateway /    │
+                           │ Load Balancer    │
+                           └────────┬────────┘
+                                    │
+                  ┌─────────────────┼─────────────────┐
+                  │                 │                 │
+          ┌───────▼───────┐ ┌──────▼───────┐ ┌──────▼───────┐
+          │ Auth Service  │ │ Game Service │ │ User Service │
+          │    Java       │ │    Java      │ │    Java      │
+          └───────┬───────┘ └──────┬───────┘ └──────┬───────┘
+                  │                │                 │
+                  └────────────────┼─────────────────┘
+                                   │
+                          ┌────────▼────────┐
+                          │  AI Service     │
+                          │ AI Gateway      │
+                          └────────┬────────┘
+                                   │
+                    ┌──────────────┼──────────────┐
+                    │              │              │
+                OpenAI/          Other AI      Moderation
+                Gemini           Models          AI
+                    │
+                    ▼
+             ┌──────────────┐
+             │ AI Response  │
+             │ + Validation │
+             └──────┬───────┘
+                    │
+          ┌─────────┴──────────┐
+          │                    │
+     PostgreSQL             Redis
+     User/Game data         Cache/Rate limit
+          │
+          ▼
+        S3
+ Images / Videos / Assets
