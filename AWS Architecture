@@ -1,0 +1,15 @@
+Route 53
+    ↓
+CloudFront
+    ↓
+AWS WAF
+    ↓
+ALB
+    ↓
+EC2 / ECS
+    ↓
+Spring Boot
+    │
+    ├── RDS PostgreSQL
+    ├── ElastiCache Redis
+    └── S3
