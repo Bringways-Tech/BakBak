@@ -1,0 +1,10 @@
+                 Java Application
+                       │
+                       ▼
+                ┌─────────────┐
+                │  AI Gateway │
+                └──────┬──────┘
+                       │
+             ┌─────────┼─────────┐
+             ↓         ↓         ↓
+          Gemini     OpenAI    Future AI
