@@ -1,0 +1,13 @@
+bakbak-backend/
+
+├── auth/
+├── users/
+├── games/
+├── challenges/
+├── roast/
+├── friends/
+├── leaderboard/
+├── notifications/
+├── moderation/
+├── ai/
+└── analytics/
